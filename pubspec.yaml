@@ -1,0 +1,50 @@
+name: compedia
+description: "A new Flutter project."
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=3.3.2 <4.0.0"
+
+dependencies:
+  cached_network_image: ^3.3.1
+  dio: ^5.4.2+1
+  flutter:
+    sdk: flutter
+  flutter_dotenv: ^5.1.0
+  flutter_form_builder: ^9.2.1
+  flutter_secure_storage: ^9.0.0
+  flutter_svg: ^2.0.10+1
+  form_builder_validators: ^9.1.0
+  get: ^4.6.6
+  gettext: ^1.2.0
+  json_annotation: ^4.8.1
+  retrofit: ^4.1.0
+
+dev_dependencies:
+  build_runner: ^2.4.9
+  flutter_gen_runner: null
+  flutter_lints: ^3.0.0
+  flutter_test:
+    sdk: flutter
+  json_serializable: ^6.7.1
+  retrofit_generator: ^8.1.0
+
+flutter_gen:
+  output: lib/config/gen
+  integrations:
+    flutter_svg: true
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - .env
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Medium.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
