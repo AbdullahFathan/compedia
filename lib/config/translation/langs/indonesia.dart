@@ -31,4 +31,22 @@ Map<String, String> indonesia = {
   'txt_login_google': 'Masuk dengan Google',
   'txt_buat_akun': "Belum punya akun? ",
   'txt_buat_akun2': "Daftar",
+
+  //Register Page
+  'txt_register_title': 'Daftar Akun',
+  'txt_register_sub':
+      'Daftarkan akunmu untuk dapat menggunakan aplikasi kami (gunakan email kampus jika ada)',
+  'txt_nama_hint': 'Nama Lengkap',
+  'txt_nama_sub': 'Masukkan sesuai dengan nama anda di PDDIKTI',
+  'txt_univ_hint': 'Asal Institusi',
+  'txt_univ_sub': 'Pilih asal institusi yang sedang Anda tempuh',
+  'txt_register_email_hint': 'Email',
+  'txt_register_email_sub': "Masukkan alamat email aktif anda",
+  'txt_register_pass_hint': 'Kata Sandi',
+  'txt_register_pass_sub': 'Masukkan kata sandi yang ingin anda buat',
+  'txt_register_sk':
+      'Dengan mendaftarkan anda telah membaca dan menyetujui Syarat & Ketentuan dari aplikasi',
+  'txt_btn_register': 'Daftar',
+  'txt_udah_akun': 'Sudah punya akun?',
+  'txt_udah_akun2': 'Masuk'
 };

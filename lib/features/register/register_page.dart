@@ -1,7 +1,6 @@
 import 'package:compedia/config/gen/image_resources.dart';
 import 'package:compedia/config/themes/resources/app_color.dart';
-import 'package:compedia/features/login/login_controller.dart';
-import 'package:compedia/features/register/register_page.dart';
+import 'package:compedia/features/register/register_controller.dart';
 import 'package:compedia/utils/widget/image_load.dart';
 import 'package:compedia/utils/widget/primary_button.dart';
 import 'package:compedia/utils/widget/state_helper.dart';
@@ -10,9 +9,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:get/get.dart';
 
-class LoginPage extends GetView<LoginController> {
-  static const route = "/login";
-  const LoginPage({super.key});
+class RegisterPage extends GetView<RegisterController> {
+  static const route = '/register';
+  const RegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,13 +45,13 @@ class LoginPage extends GetView<LoginController> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'txt_lg_welcom'.tr,
+                          'txt_register_title'.tr,
                           style: Get.textTheme.displayLarge!.copyWith(
                             fontSize: 22,
                           ),
                         ),
                         Text(
-                          'txt_lg_content'.tr,
+                          'txt_register_sub'.tr,
                           style: Get.textTheme.bodySmall!.copyWith(
                             fontSize: 14,
                             color: AppColor.neutral70,
@@ -62,9 +61,9 @@ class LoginPage extends GetView<LoginController> {
                           height: 10,
                         ),
                         FormBuilderTextField(
-                          name: "Email",
+                          name: "Nama",
                           decoration: InputDecoration(
-                            hintText: 'Email',
+                            hintText: 'txt_nama_hint'.tr,
                             border: Get.theme.inputDecorationTheme.border,
                           ),
                         ),
@@ -75,7 +74,56 @@ class LoginPage extends GetView<LoginController> {
                             bottom: 12,
                           ),
                           child: Text(
-                            'txt_email_sub'.tr,
+                            'txt_nama_sub'.tr,
+                            style: Get.textTheme.bodySmall!.copyWith(
+                              fontSize: 12,
+                              color: AppColor.neutral70,
+                            ),
+                          ),
+                        ),
+                        FormBuilderDropdown<String>(
+                          name: "Univ",
+                          decoration: InputDecoration(
+                            hintText: 'txt_univ_hint'.tr,
+                            border: Get.theme.inputDecorationTheme.border,
+                          ),
+                          items: controller.univ
+                              .map((item) => DropdownMenuItem(
+                                    alignment: AlignmentDirectional.centerStart,
+                                    value: item,
+                                    child: Text(item),
+                                  ))
+                              .toList(),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            top: 4,
+                            left: 12,
+                            bottom: 12,
+                          ),
+                          child: Text(
+                            'txt_univ_sub'.tr,
+                            style: Get.textTheme.bodySmall!.copyWith(
+                              fontSize: 12,
+                              color: AppColor.neutral70,
+                            ),
+                          ),
+                        ),
+                        FormBuilderTextField(
+                          name: "Email",
+                          decoration: InputDecoration(
+                            hintText: 'txt_register_email_hint'.tr,
+                            border: Get.theme.inputDecorationTheme.border,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            top: 4,
+                            left: 12,
+                            bottom: 12,
+                          ),
+                          child: Text(
+                            'txt_register_email_sub'.tr,
                             style: Get.textTheme.bodySmall!.copyWith(
                               fontSize: 12,
                               color: AppColor.neutral70,
@@ -106,45 +154,30 @@ class LoginPage extends GetView<LoginController> {
                             bottom: 12,
                           ),
                           child: Text(
-                            'txt_password_sub'.tr,
+                            'txt_register_pass_sub'.tr,
                             style: Get.textTheme.bodySmall!.copyWith(
                               fontSize: 12,
                               color: AppColor.neutral70,
                             ),
                           ),
                         ),
-                        Align(
-                          alignment: Alignment.centerRight,
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10, bottom: 20),
                           child: Text(
-                            'txt_password_lupa'.tr,
-                            style: Get.textTheme.displayLarge!.copyWith(
-                              color: AppColor.primaryColor,
+                            'txt_register_sk'.tr,
+                            textAlign: TextAlign.center,
+                            style: Get.textTheme.bodySmall!.copyWith(
+                              color: AppColor.neutral70,
                               fontSize: 14,
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        Visibility(
-                          visible: controller.isErorUser.value,
-                          child: Text(
-                            'txt_eror_user'.tr,
-                            style: Get.textTheme.bodySmall!.copyWith(
-                              fontSize: 12,
-                              color: AppColor.redColor,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
                         PrimaryButton(
-                          text: 'txt_btn_login'.tr,
+                          text: 'txt_btn_register'.tr,
                           onPressed: () {
                             if (controller.formKey.currentState!.validate()) {
                               controller.formKey.currentState!.save();
-                              controller.login();
+                              controller.register();
                             }
                           },
                         ),
@@ -153,60 +186,21 @@ class LoginPage extends GetView<LoginController> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 10, bottom: 20),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      'txt_opsi_login'.tr,
-                      style: Get.textTheme.bodySmall!.copyWith(
-                        color: AppColor.neutral70,
-                        fontSize: 14,
-                      ),
-                    ),
-                  ),
-                ),
-
-                // Button Google Login,
-                PrimaryButton.outlineVersion(
-                  onTap: () {},
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      ImageLoad(
-                        src: appImages.iconGoogle.path,
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        'txt_login_google'.tr,
-                        style: Get.textTheme.bodyMedium!.copyWith(
-                          fontSize: 14,
-                          color: AppColor.primaryColor,
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-
-                Padding(
                   padding: const EdgeInsets.symmetric(vertical: 15),
                   child: Align(
                     alignment: Alignment.center,
                     child: Text.rich(
                       TextSpan(
-                          text: 'txt_buat_akun'.tr,
+                          text: 'txt_udah_akun'.tr,
                           style: Get.textTheme.bodySmall!.copyWith(
                             color: AppColor.neutral70,
                             fontSize: 14,
                           ),
                           children: [
                             TextSpan(
-                              text: 'txt_buat_akun2'.tr,
+                              text: " ${'txt_udah_akun2'.tr}",
                               recognizer: TapGestureRecognizer()
-                                ..onTap = () => Get.toNamed(
-                                      RegisterPage.route,
-                                    ),
+                                ..onTap = () => Get.back(),
                               style: Get.textTheme.displayLarge!.copyWith(
                                 color: AppColor.primaryColor,
                                 fontSize: 14,
