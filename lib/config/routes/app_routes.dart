@@ -1,3 +1,4 @@
+import 'package:compedia/features/forgot_password/forgot_password_route.dart';
 import 'package:compedia/features/login/login_route.dart';
 import 'package:compedia/features/onboarding/onboarding_route.dart';
 import 'package:compedia/features/register/register_route.dart';
@@ -11,5 +12,6 @@ class AppRoute {
     ...loginRoute,
     ...onboardingRoute,
     ...registerRoute,
+    ...forgotPasswordRoute,
   ];
 }

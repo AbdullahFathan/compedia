@@ -48,5 +48,11 @@ Map<String, String> indonesia = {
       'Dengan mendaftarkan anda telah membaca dan menyetujui Syarat & Ketentuan dari aplikasi',
   'txt_btn_register': 'Daftar',
   'txt_udah_akun': 'Sudah punya akun?',
-  'txt_udah_akun2': 'Masuk'
+  'txt_udah_akun2': 'Masuk',
+
+  //Forgot Password Page
+  'txt_fp_title': 'Reset Kata Sandimu Disini',
+  'txt_fp_sub': 'Masukkan alamat email yang didaftarkan pada akun tersebut',
+  'txt_btn_sandi': 'Reset Kata Sandi',
+  'txt_btn_back': 'Kembali',
 };

@@ -1,5 +1,6 @@
 import 'package:compedia/config/gen/image_resources.dart';
 import 'package:compedia/config/themes/resources/app_color.dart';
+import 'package:compedia/features/forgot_password/forgot_password_page.dart';
 import 'package:compedia/features/login/login_controller.dart';
 import 'package:compedia/features/register/register_page.dart';
 import 'package:compedia/utils/widget/image_load.dart';
@@ -115,11 +116,14 @@ class LoginPage extends GetView<LoginController> {
                         ),
                         Align(
                           alignment: Alignment.centerRight,
-                          child: Text(
-                            'txt_password_lupa'.tr,
-                            style: Get.textTheme.displayLarge!.copyWith(
-                              color: AppColor.primaryColor,
-                              fontSize: 14,
+                          child: GestureDetector(
+                            onTap: () => Get.toNamed(ForgotPasswordPage.route),
+                            child: Text(
+                              'txt_password_lupa'.tr,
+                              style: Get.textTheme.displayLarge!.copyWith(
+                                color: AppColor.primaryColor,
+                                fontSize: 14,
+                              ),
                             ),
                           ),
                         ),
