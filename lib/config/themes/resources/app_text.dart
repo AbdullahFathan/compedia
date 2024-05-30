@@ -5,17 +5,17 @@ class TextClass {
   static TextTheme textTheme = const TextTheme(
     displayLarge: TextStyle(
       fontWeight: FontWeight.bold,
-      color: AppColor.blackColor,
+      color: AppColor.neutral100,
       fontSize: 18,
     ),
     bodyMedium: TextStyle(
       fontWeight: FontWeight.w500,
-      color: AppColor.blackColor,
+      color: AppColor.neutral100,
       fontSize: 14,
     ),
     bodySmall: TextStyle(
       fontWeight: FontWeight.w400,
-      color: AppColor.blackColor,
+      color: AppColor.neutral100,
       fontSize: 12,
     ),
   );

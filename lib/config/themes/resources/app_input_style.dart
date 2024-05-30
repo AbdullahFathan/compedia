@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:compedia/config/themes/resources/app_color.dart';
+import 'package:get/get.dart';
 
 class InputDecorationStyle {
   static InputDecorationTheme inputDecoration() {
     return InputDecorationTheme(
       filled: true,
-      fillColor: Colors.grey[50],
+      fillColor: AppColor.whiteColor,
       contentPadding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
@@ -31,7 +32,10 @@ class InputDecorationStyle {
       labelStyle: const TextStyle(
         color: AppColor.blackColor,
       ),
-      hintStyle: const TextStyle(color: AppColor.hintColor, fontSize: 12),
+      hintStyle: Get.textTheme.bodySmall!.copyWith(
+        color: AppColor.neutral60,
+        fontSize: 16,
+      ),
     );
   }
 }

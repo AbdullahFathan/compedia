@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:compedia/config/themes/resources/app_color.dart';
+import 'package:get/get.dart';
 
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton({
@@ -9,7 +10,7 @@ class PrimaryButton extends StatelessWidget {
     required this.onPressed,
     this.height = 48,
     this.witdh = double.infinity,
-    this.fontSize,
+    this.fontSize = 16,
     this.fontWeight,
     this.textColor,
     this.buttonColor,
@@ -38,6 +39,10 @@ class PrimaryButton extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           elevation: elevation,
+          padding: const EdgeInsets.symmetric(
+            vertical: 10,
+            horizontal: 24,
+          ),
           backgroundColor: buttonColor ?? AppColor.primaryColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(radiusValue),
@@ -53,6 +58,34 @@ class PrimaryButton extends StatelessWidget {
               ),
         ),
       ),
+    );
+  }
+
+  static Widget outlineVersion(
+      {void Function()? onTap,
+      String? text,
+      Widget? child,
+      double? textSize,
+      Color? textColor}) {
+    return OutlinedButton(
+      onPressed: onTap,
+      style: OutlinedButton.styleFrom(
+        fixedSize: const Size(double.infinity, 48),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+            side: const BorderSide(
+              width: 10,
+              color: AppColor.primaryColor,
+            )),
+      ),
+      child: child ??
+          Text(
+            "$text",
+            style: Get.textTheme.displayLarge!.copyWith(
+              color: textColor ?? AppColor.primaryColor,
+              fontSize: textSize ?? 14,
+            ),
+          ),
     );
   }
 }

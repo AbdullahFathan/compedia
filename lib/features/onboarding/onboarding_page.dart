@@ -100,7 +100,6 @@ class OnboardingPage extends GetView<OnboardingController> {
                                   ? "Mulai Sekarang!"
                                   : "Selanjutnya",
                               onPressed: () => controller.nextPage(),
-                              fontSize: 16,
                             ),
                           )
                         ],

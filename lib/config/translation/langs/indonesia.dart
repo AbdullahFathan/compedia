@@ -16,4 +16,19 @@ Map<String, String> indonesia = {
   'txt_contents4':
       'Bagikan pengalaman lombamu dan jadilah\ninspirasi bagi mereka yang masih berproses!',
   'txt_btn_lewati': 'Lewati',
+
+  //Login Page
+  'txt_lg_welcom': 'Selamat Datang',
+  'txt_lg_content': 'Masuk ke akun Anda untuk dapat menggunakan layanan kami',
+  'txt_email_hint': 'Email',
+  'txt_password_hint': 'Kata Sandi',
+  'txt_email_sub': 'Pastikan alamat emailnya telah terverifikasi',
+  'txt_password_sub': 'Pastikan kata sandi yang dimasukkan benar',
+  'txt_password_lupa': 'Lupa Kata Sandi',
+  'txt_eror_user': 'Maaf, email atau kata sandi yang Anda masukkan salah',
+  'txt_btn_login': "Masuk",
+  'txt_opsi_login': 'Atau masuk dengan',
+  'txt_login_google': 'Masuk dengan Google',
+  'txt_buat_akun': "Belum punya akun? ",
+  'txt_buat_akun2': "Daftar",
 };
