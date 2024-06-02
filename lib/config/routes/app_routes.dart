@@ -4,6 +4,7 @@ import 'package:compedia/features/onboarding/onboarding_route.dart';
 import 'package:compedia/features/register/register_route.dart';
 import 'package:compedia/features/splash/splash_page.dart';
 import 'package:compedia/features/splash/splash_route.dart';
+import 'package:compedia/features/welcome/welcome_route.dart';
 
 class AppRoute {
   static String initialRoute = SplashPage.route;
@@ -13,5 +14,6 @@ class AppRoute {
     ...onboardingRoute,
     ...registerRoute,
     ...forgotPasswordRoute,
+    ...welcomeRoute,
   ];
 }

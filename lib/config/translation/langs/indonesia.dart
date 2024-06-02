@@ -55,4 +55,11 @@ Map<String, String> indonesia = {
   'txt_fp_sub': 'Masukkan alamat email yang didaftarkan pada akun tersebut',
   'txt_btn_sandi': 'Reset Kata Sandi',
   'txt_btn_back': 'Kembali',
+
+  //Welcome Page
+  'txt_wp_title': "Selamat Datang di Compedia!",
+  'txt_wp_sub':
+      "Yuk, isi profilmu agar kami dapat memberikan\nrekomendasi pilihan lomba yang tepat!",
+  'txt_wp_btn_color': "Isi Sekarang",
+  'txt_wp_btn_outline': "Nanti Aja",
 };

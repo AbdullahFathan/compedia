@@ -1,4 +1,4 @@
-import 'package:compedia/data/remote/base/base_controller.dart';
+import 'package:compedia/utils/helper/base/base_controller.dart';
 import 'package:compedia/features/login/login_page.dart';
 import 'package:compedia/features/onboarding/models/onboarding.dart';
 import 'package:flutter/material.dart';

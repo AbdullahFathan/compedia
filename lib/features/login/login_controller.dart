@@ -1,4 +1,4 @@
-import 'package:compedia/data/remote/base/base_controller.dart';
+import 'package:compedia/utils/helper/base/base_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:get/get.dart';

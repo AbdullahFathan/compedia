@@ -32,6 +32,10 @@ class $AssetsImagesGen {
   AssetGenImage get imgLogo =>
       const AssetGenImage('assets/images/img_logo.png');
 
+  /// File path: assets/images/img_welcome.png
+  AssetGenImage get imgWelcome =>
+      const AssetGenImage('assets/images/img_welcome.png');
+
   /// File path: assets/images/onboarding1.png
   AssetGenImage get onboarding1 =>
       const AssetGenImage('assets/images/onboarding1.png');
@@ -55,6 +59,7 @@ class $AssetsImagesGen {
         imgEror,
         imgHello,
         imgLogo,
+        imgWelcome,
         onboarding1,
         onboarding2,
         onboarding3,

@@ -70,6 +70,10 @@ class PrimaryButton extends StatelessWidget {
     return OutlinedButton(
       onPressed: onTap,
       style: OutlinedButton.styleFrom(
+        padding: const EdgeInsets.symmetric(
+          vertical: 10,
+          horizontal: 24,
+        ),
         fixedSize: const Size(double.infinity, 48),
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
