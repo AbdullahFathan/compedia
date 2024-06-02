@@ -4,6 +4,7 @@ import 'package:compedia/features/onboarding/onboarding_route.dart';
 import 'package:compedia/features/register/register_route.dart';
 import 'package:compedia/features/splash/splash_page.dart';
 import 'package:compedia/features/splash/splash_route.dart';
+import 'package:compedia/features/welcome/questionnaire/questionnaire_route.dart';
 import 'package:compedia/features/welcome/welcome_route.dart';
 
 class AppRoute {
@@ -15,5 +16,6 @@ class AppRoute {
     ...registerRoute,
     ...forgotPasswordRoute,
     ...welcomeRoute,
+    ...questionnaireRoute,
   ];
 }
