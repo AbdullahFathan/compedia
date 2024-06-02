@@ -1,3 +1,4 @@
+import 'package:compedia/features/welcome/questionnaire/widgets/question_one.dart';
 import 'package:compedia/features/welcome/questionnaire/widgets/stepper.dart';
 import 'package:compedia/utils/widget/primary_button.dart';
 import 'questionnaire_controller.dart';
@@ -42,8 +43,7 @@ class QuestionnairePage extends GetView<QuestionnaireController> {
                                     currentIndex: controller.currIndex.value,
                                   ),
                                 ),
-
-                                //TODO: isi content page di sini
+                                getContentBody(index),
                               ],
                             ),
                           );
@@ -51,7 +51,7 @@ class QuestionnairePage extends GetView<QuestionnaireController> {
                       ),
                     ),
                     PrimaryButton(
-                        text: "Selanjutnya",
+                        text: 'txt_btn_next'.tr,
                         onPressed: () {
                           controller.nextPage();
                         }),
@@ -61,7 +61,7 @@ class QuestionnairePage extends GetView<QuestionnaireController> {
                     SizedBox(
                       width: double.infinity,
                       child: PrimaryButton.outlineVersion(
-                          text: "Sebelumnnya",
+                          text: 'txt_btn_back'.tr,
                           onTap: () {
                             controller.prevPage();
                           }),
@@ -72,5 +72,17 @@ class QuestionnairePage extends GetView<QuestionnaireController> {
         ),
       ),
     );
+  }
+
+  Widget getContentBody(int index) {
+    switch (index) {
+      case 0:
+        return const QuestionOneWidget();
+
+      default:
+        return Center(
+          child: Text("page ke - $index"),
+        );
+    }
   }
 }

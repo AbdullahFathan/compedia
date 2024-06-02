@@ -62,4 +62,9 @@ Map<String, String> indonesia = {
       "Yuk, isi profilmu agar kami dapat memberikan\nrekomendasi pilihan lomba yang tepat!",
   'txt_wp_btn_color': "Isi Sekarang",
   'txt_wp_btn_outline': "Nanti Aja",
+
+  //Questionnaire Page
+  'txt_title_1':
+      "Halo calon juara! Kamu punya keminatan\ndi background lomba apa aja?\n(bisa pilih lebih dari 1)",
+  'txt_btn_next': "Selanjutnya",
 };
