@@ -35,6 +35,7 @@ class QuestionOneWidget extends GetView<QuestionnaireController> {
                 height: 36,
                 witdh: 84,
                 text: keminatan[index],
+                isPick: controller.answerOne.contains(keminatan[index]),
               );
             },
           )

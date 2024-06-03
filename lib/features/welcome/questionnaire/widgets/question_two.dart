@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
-class QuestionThridWidget extends GetView<QuestionnaireController> {
-  const QuestionThridWidget({super.key});
+class QuestionTwoWidget extends GetView<QuestionnaireController> {
+  const QuestionTwoWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class QuestionThridWidget extends GetView<QuestionnaireController> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            'txt_title_3'.tr,
+            'txt_title_2'.tr,
             textAlign: TextAlign.center,
             style: Get.textTheme.bodyMedium!.copyWith(
               fontSize: 16,
@@ -25,7 +25,7 @@ class QuestionThridWidget extends GetView<QuestionnaireController> {
           ListView.separated(
             shrinkWrap: true,
             padding: const EdgeInsets.only(top: 30),
-            itemCount: harga.length,
+            itemCount: pelaksanaan.length,
             separatorBuilder: (context, index) => const SizedBox(
               height: 20,
             ),
@@ -33,8 +33,8 @@ class QuestionThridWidget extends GetView<QuestionnaireController> {
               return ChoiceButtonWidget(
                 height: 36,
                 witdh: 301,
-                text: harga[index],
-                isPick: controller.answerThird.contains(harga[index]),
+                text: pelaksanaan[index],
+                isPick: controller.answerTwo.contains(pelaksanaan[index]),
               );
             },
           )

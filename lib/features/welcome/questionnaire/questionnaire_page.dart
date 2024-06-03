@@ -1,5 +1,6 @@
 import 'package:compedia/features/welcome/questionnaire/widgets/question_one.dart';
 import 'package:compedia/features/welcome/questionnaire/widgets/question_third.dart';
+import 'package:compedia/features/welcome/questionnaire/widgets/question_two.dart';
 import 'package:compedia/features/welcome/questionnaire/widgets/stepper.dart';
 import 'package:compedia/utils/widget/primary_button.dart';
 import 'questionnaire_controller.dart';
@@ -79,6 +80,8 @@ class QuestionnairePage extends GetView<QuestionnaireController> {
     switch (index) {
       case 0:
         return const QuestionOneWidget();
+      case 1:
+        return const QuestionTwoWidget();
       case 2:
         return const QuestionThridWidget();
 

@@ -1,18 +1,20 @@
-import 'package:compedia/features/welcome/questionnaire/questionnaire_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:compedia/config/themes/resources/app_color.dart';
+import 'package:compedia/features/welcome/questionnaire/questionnaire_controller.dart';
 
 class ChoiceButtonWidget extends StatefulWidget {
   final String text;
   final double witdh;
   final double height;
+  final bool isPick;
   const ChoiceButtonWidget({
     super.key,
     required this.text,
     required this.witdh,
     required this.height,
+    required this.isPick,
   });
 
   @override
@@ -20,7 +22,13 @@ class ChoiceButtonWidget extends StatefulWidget {
 }
 
 class _ChoiceButtonWidgetState extends State<ChoiceButtonWidget> {
-  bool isSelected = false;
+  late bool isSelected;
+
+  @override
+  void initState() {
+    isSelected = widget.isPick;
+    super.initState();
+  }
 
   final controller = Get.find<QuestionnaireController>();
 
