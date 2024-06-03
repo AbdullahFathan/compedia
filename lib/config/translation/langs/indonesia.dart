@@ -72,5 +72,11 @@ Map<String, String> indonesia = {
       'Kamu prefer untuk mengikuti lomba yang\nsifat pelaksanaannya seperti apa?\n(bisa pilih lebih dari 1)',
 
   'txt_title_3':
-      "Kamu prefer untuk mengikuti lomba yang\nharga pendaftarannya berada di range apa?\n(bisa pilih lebih dari 1)"
+      "Kamu prefer untuk mengikuti lomba yang\nharga pendaftarannya berada di range apa?\n(bisa pilih lebih dari 1)",
+
+  //Persona Page
+  'txt_pp_title': 'Yeay! Persona Profilmu Berhasil Disimpan!',
+  'txt_pp_sub':
+      'Dengan ini, Compedia dapat memberikan rekomendasi lomba yang sesuai denganmu!',
+  'txt_pp_btn': 'Lihat Beranda',
 };

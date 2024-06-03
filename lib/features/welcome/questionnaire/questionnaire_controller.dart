@@ -1,3 +1,4 @@
+import 'package:compedia/features/welcome/persona_done/persona_done_page.dart';
 import 'package:compedia/utils/helper/base/base_controller.dart';
 import 'package:compedia/utils/helper/snackbar_helper.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,7 @@ class QuestionnaireController extends BaseController<void> {
   RxInt currIndex = 0.obs;
 
   List<String> answerOne = [];
-  List<String> answerTwo = ["A"];
+  List<String> answerTwo = [];
   List<String> answerThird = [];
 
   void nextPage() {
@@ -22,6 +23,8 @@ class QuestionnaireController extends BaseController<void> {
           duration: const Duration(milliseconds: 300),
           curve: Curves.easeInOut,
         );
+      } else {
+        Get.toNamed(PersonaDonePage.route);
       }
     } else {
       SnackBarHelper.erorSnackBar("Perlu memilih 1 item");

@@ -1,3 +1,4 @@
+import 'package:compedia/features/welcome/welcome_page.dart';
 import 'package:compedia/utils/helper/base/base_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
@@ -12,5 +13,7 @@ class LoginController extends BaseController<void> {
     isObscure(!isObscure.value);
   }
 
-  Future<void> login() async {}
+  Future<void> login() async {
+    Get.offAllNamed(WelcomePage.route);
+  }
 }

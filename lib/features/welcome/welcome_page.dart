@@ -1,5 +1,6 @@
 import 'package:compedia/config/gen/image_resources.dart';
 import 'package:compedia/config/themes/resources/app_color.dart';
+import 'package:compedia/features/welcome/questionnaire/questionnaire_page.dart';
 import 'package:compedia/utils/widget/image_load.dart';
 import 'package:compedia/utils/widget/primary_button.dart';
 
@@ -51,7 +52,11 @@ class WelcomePage extends StatelessWidget {
                 ],
               ),
             ),
-            PrimaryButton(text: 'txt_wp_btn_color'.tr, onPressed: () {}),
+            PrimaryButton(
+                text: 'txt_wp_btn_color'.tr,
+                onPressed: () {
+                  Get.toNamed(QuestionnairePage.route);
+                }),
             const SizedBox(
               height: 12,
             ),
