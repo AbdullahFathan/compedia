@@ -9,7 +9,7 @@ class QuestionnaireController extends BaseController<void> {
   RxInt currIndex = 0.obs;
 
   List<String> answerOne = [];
-  List<String> answerTwo = [];
+  List<String> answerTwo = ["A"];
   List<String> answerThird = [];
 
   void nextPage() {

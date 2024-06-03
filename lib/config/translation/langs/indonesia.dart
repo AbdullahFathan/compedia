@@ -67,4 +67,7 @@ Map<String, String> indonesia = {
   'txt_title_1':
       "Halo calon juara! Kamu punya keminatan\ndi background lomba apa aja?\n(bisa pilih lebih dari 1)",
   'txt_btn_next': "Selanjutnya",
+
+  'txt_title_3':
+      "Kamu prefer untuk mengikuti lomba yang\nharga pendaftarannya berada di range apa?\n(bisa pilih lebih dari 1)"
 };
