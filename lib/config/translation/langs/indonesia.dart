@@ -106,4 +106,8 @@ Map<String, String> indonesia = {
   'txt_kominitas_sub':
       'Berikut rekomendasi komunitas yang dapat kamu join sesuai dengan keminatan lombamu!',
   'txt_btn_komunitas_lain': 'Lihat Komunitas Lainnya',
+
+  //Competion Page
+  'txt_cp_bar1': 'Cari Kompetisi',
+  'txt_cp_bar2': "Kompetisi Diikuti",
 };

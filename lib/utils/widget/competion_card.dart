@@ -10,7 +10,7 @@ class CompetionCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 145,
+      height: 200,
       width: 350,
       padding: const EdgeInsets.symmetric(
         vertical: 8,
