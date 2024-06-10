@@ -1,5 +1,6 @@
-import 'package:compedia/features/competition/widgets/find_competion.dart';
-import 'package:compedia/features/competition/widgets/followed_competion.dart';
+import 'package:compedia/features/competition/find_competion/find_competion_page.dart';
+import 'package:compedia/features/competition/followed_competion/followed_competion_page.dart';
+
 import 'package:compedia/utils/widget/tab_widget.dart';
 
 import 'competition_controller.dart';
@@ -29,8 +30,8 @@ class CompetitionPage extends GetView<CompetitionController> {
                   'txt_cp_bar2'.tr,
                 ],
                 tabWidget: const [
-                  FindCompetionTab(),
-                  FollowedCompetionTab(),
+                  FindCompetionPage(),
+                  FollowedCompetionPage(),
                 ],
               )),
         ),
