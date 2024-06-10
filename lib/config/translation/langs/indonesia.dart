@@ -110,4 +110,16 @@ Map<String, String> indonesia = {
   //Competion Page
   'txt_cp_bar1': 'Cari Kompetisi',
   'txt_cp_bar2': "Kompetisi Diikuti",
+
+  //Detail Competion
+  'txt_dc_appbar': "Detail Kompetisi",
+  'txt_regis_batas': "Batas Registrasi",
+  'txt_dc_metode': "Pelaksanaan Kompetisi",
+  'txt_dc_publikasi': "Dipublikasikan Oleh",
+  'txt_dc_deskripsi': "Deskripsi Lomba",
+  'txt_dc_guide': "Guidebook Lomba",
+  'txt_dc_mentor':
+      "Berikut rekomendasi mentor yang sesuai dengan lomba ini untuk membantumu!",
+  'txt_dc_btn_color': "Daftar Sekarang (diluar aplikasi)",
+  'txt_dc_btn_outline': "Tambahkan ke Daftar Kompetisi Diikuti",
 };
