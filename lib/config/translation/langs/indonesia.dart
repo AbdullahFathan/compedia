@@ -85,5 +85,25 @@ Map<String, String> indonesia = {
   'txt_bn2': 'Kompetisi',
   'txt_bn3': 'Mentor',
   'txt_bn4': 'Komunitas',
-  'txt_bn5': 'Profile'
+  'txt_bn5': 'Profile',
+
+  //Homepage
+  'txt_gabung_mentor': "Gabung Menjadi Mentor di\nCompedia Sekarang!",
+  'txt_btn_program': "Lihat Program",
+  // Hompage - Rekomendasi Lomba Section
+  'txt_lomba_title': "Rekomendasi Lomba 👀",
+  'txt_lomba_sub': 'Berikut rekomendasi lomba yang sesuai dengan keminatanmu!',
+  'txt_btn_lomba_lain': 'Lihat Lomba Lainnya',
+
+  //Homepage -Rekomendasi Mentor Section
+  'txt_mentor_title': 'Rekomendasi Mentor 🔥',
+  'txt_mentor_sub':
+      'Berikut rekomendasi mentor yang sesuai dengan bidang spesialisasinya masing-masing!',
+  'txt_btn_mentor_lain': 'Lihat Mentor Lainnya',
+
+  //HomePage - Rekomendasi Komunitas Section
+  'txt_komunitas_title': 'Rekomendasi Komunitas 🧑🏻‍💻👩🏻‍💻',
+  'txt_kominitas_sub':
+      'Berikut rekomendasi komunitas yang dapat kamu join sesuai dengan keminatan lombamu!',
+  'txt_btn_komunitas_lain': 'Lihat Komunitas Lainnya',
 };

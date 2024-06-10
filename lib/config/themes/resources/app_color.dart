@@ -5,11 +5,14 @@ class AppColor {
   static const secondaryColor = Color(0xff4338CA);
 
   static const primary30 = Color(0xffC7D2FE);
+  static const primary50 = Color(0xffF5F5FF);
+  static const primary70 = Color(0xff4F46E5);
 
   static const whiteColor = Colors.white;
   static const blackColor = Color(0xff252525);
   static const redColor = Color(0xffE84C3D);
   static const orangeColor = Color(0xffFF884C);
+  static const greenColor = Color(0xff06976E);
 
   static const bordeColor = Colors.grey;
   static const hintColor = Color(0xffBABABC);

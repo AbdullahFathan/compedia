@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'package:compedia/config/themes/resources/app_color.dart';
-import 'package:get/get.dart';
 
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton({
     super.key,
-    required this.text,
-    required this.onPressed,
-    this.height = 48,
-    this.witdh = double.infinity,
-    this.fontSize = 16,
-    this.fontWeight,
-    this.textColor,
+    this.borderWidth = 1.5,
     this.buttonColor,
     this.elevation = 0,
+    this.fontSize = 16,
+    this.fontWeight,
+    this.height = 48,
+    required this.onPressed,
     this.radiusValue = 4,
-    this.borderWidth = 1.5,
+    required this.text,
+    this.textColor,
+    this.witdh = double.infinity,
+    this.padingVertical = 10,
+    this.padingHorizontal = 24,
   });
 
   final double borderWidth;
@@ -30,6 +32,8 @@ class PrimaryButton extends StatelessWidget {
   final String? text;
   final Color? textColor;
   final double witdh;
+  final double padingVertical;
+  final double padingHorizontal;
 
   @override
   Widget build(BuildContext context) {
@@ -39,9 +43,9 @@ class PrimaryButton extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           elevation: elevation,
-          padding: const EdgeInsets.symmetric(
-            vertical: 10,
-            horizontal: 24,
+          padding: EdgeInsets.symmetric(
+            vertical: padingVertical,
+            horizontal: padingHorizontal,
           ),
           backgroundColor: buttonColor ?? AppColor.primaryColor,
           shape: RoundedRectangleBorder(
@@ -66,6 +70,8 @@ class PrimaryButton extends StatelessWidget {
       String? text,
       Widget? child,
       double? textSize,
+      double? height,
+      Color? borderColor,
       Color? textColor}) {
     return OutlinedButton(
       onPressed: onTap,
@@ -74,12 +80,12 @@ class PrimaryButton extends StatelessWidget {
           vertical: 10,
           horizontal: 24,
         ),
-        fixedSize: const Size(double.infinity, 48),
+        fixedSize: Size(double.infinity, height ?? 48),
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
-            side: const BorderSide(
+            side: BorderSide(
               width: 10,
-              color: AppColor.primaryColor,
+              color: borderColor ?? AppColor.primaryColor,
             )),
       ),
       child: child ??
