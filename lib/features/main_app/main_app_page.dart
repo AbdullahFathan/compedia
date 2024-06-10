@@ -1,7 +1,7 @@
 import 'package:compedia/config/themes/resources/app_color.dart';
 import 'package:compedia/features/competition/competition_page.dart';
+import 'package:compedia/features/comunity/comunity_page.dart';
 import 'package:compedia/features/home/home_page.dart';
-import 'package:compedia/features/level/level_page.dart';
 import 'package:compedia/features/mentor/mentor_page.dart';
 import 'package:compedia/features/profile/profile_page.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -28,7 +28,7 @@ class _MainAppPageState extends State<MainAppPage> {
           HomePage(),
           CompetitionPage(),
           MentorPage(),
-          LevelPage(),
+          ComunityPage(),
           ProfilePage(),
         ],
       ),
@@ -48,26 +48,26 @@ class _MainAppPageState extends State<MainAppPage> {
           fontSize: 12,
           color: AppColor.neutral80,
         ),
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Berada",
+            icon: const Icon(Icons.home),
+            label: "txt_bn1".tr,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.emoji_events),
-            label: "Kompetisi",
+            icon: const Icon(Icons.emoji_events),
+            label: "txt_bn2".tr,
           ),
           BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.crown),
-            label: "Mentor",
+            icon: const FaIcon(FontAwesomeIcons.crown),
+            label: "txt_bn3".tr,
           ),
           BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.medal),
-            label: "Level",
+            icon: const FaIcon(FontAwesomeIcons.handsClapping),
+            label: "txt_bn4".tr,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "Profile",
+            icon: const Icon(Icons.person),
+            label: "txt_bn5".tr,
           ),
         ],
       ),

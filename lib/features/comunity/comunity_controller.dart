@@ -1,6 +1,6 @@
 import 'package:compedia/utils/helper/base/base_controller.dart';
 
 
-class LevelController extends BaseController<void> {
+class ComunityController extends BaseController<void> {
   Future<void> loadData() async {}
 }

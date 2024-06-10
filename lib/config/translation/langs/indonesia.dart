@@ -79,4 +79,11 @@ Map<String, String> indonesia = {
   'txt_pp_sub':
       'Dengan ini, Compedia dapat memberikan rekomendasi lomba yang sesuai denganmu!',
   'txt_pp_btn': 'Lihat Beranda',
+
+  //Bottom Navbar
+  'txt_bn1': 'Beranda',
+  'txt_bn2': 'Kompetisi',
+  'txt_bn3': 'Mentor',
+  'txt_bn4': 'Komunitas',
+  'txt_bn5': 'Profile'
 };

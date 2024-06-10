@@ -1,7 +1,8 @@
 import 'package:compedia/features/competition/competition_route.dart';
+import 'package:compedia/features/comunity/comunity_route.dart';
 import 'package:compedia/features/forgot_password/forgot_password_route.dart';
 import 'package:compedia/features/home/home_route.dart';
-import 'package:compedia/features/level/level_route.dart';
+
 import 'package:compedia/features/login/login_route.dart';
 import 'package:compedia/features/main_app/main_app_route.dart';
 import 'package:compedia/features/mentor/mentor_route.dart';
@@ -27,7 +28,7 @@ class AppRoute {
     ...personaDoneRoute,
     ...mainAppRoute,
     ...homeRoute,
-    ...levelRoute,
+    ...comunityRoute,
     ...mentorRoute,
     ...profileRoute,
     ...competitionRoute,

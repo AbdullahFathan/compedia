@@ -19,11 +19,6 @@ List<OnBoardingModel> onboardingConstan = [
     content: 'txt_contents1'.tr,
   ),
   OnBoardingModel(
-    title: 'txt_title2'.tr,
-    image: appImages.onboarding2.path,
-    content: 'txt_contents2'.tr,
-  ),
-  OnBoardingModel(
     title: 'txt_title3'.tr,
     image: appImages.onboarding3.path,
     content: 'txt_contents3'.tr,

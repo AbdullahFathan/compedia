@@ -1,17 +1,17 @@
-import 'level_controller.dart';
+import 'comunity_controller.dart';
 import 'package:compedia/utils/widget/appbar.dart';
 import 'package:compedia/utils/widget/state_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LevelPage extends GetView<LevelController> {
-  static const route ='/level';
-  const LevelPage({super.key});
+class ComunityPage extends GetView<ComunityController> {
+  static const route ='/comunity';
+  const ComunityPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const PrimaryAppBar(text: 'Level Page'),
+      appBar: const PrimaryAppBar(text: 'Comunity Page'),
       body: Obx(
         () => RefreshIndicator(
           onRefresh: () => controller.loadData(),
@@ -20,7 +20,7 @@ class LevelPage extends GetView<LevelController> {
             isEmpty: controller.isEmpty,
             isEror: controller.isEror,
             body: const Center(
-              child: Text('Level Page'),
+              child: Text('Comunity Page'),
             ),
           ),
         ),
