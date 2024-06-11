@@ -13,6 +13,7 @@ class AppColor {
   static const redColor = Color(0xffE84C3D);
   static const orangeColor = Color(0xffFF884C);
   static const greenColor = Color(0xff06976E);
+  static const yellowColor = Color(0xffF8B11C);
 
   static const bordeColor = Colors.grey;
   static const hintColor = Color(0xffBABABC);
