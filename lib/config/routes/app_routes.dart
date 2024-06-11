@@ -3,6 +3,8 @@ import 'package:compedia/features/competition/detail_competition/detail_competit
 import 'package:compedia/features/competition/find_competion/find_competion_route.dart';
 import 'package:compedia/features/competition/followed_competion/followed_competion_route.dart';
 import 'package:compedia/features/comunity/comunity_route.dart';
+import 'package:compedia/features/comunity/find_comunity/find_comunity_route.dart';
+import 'package:compedia/features/comunity/joined_comunity/joined_comunity_route.dart';
 import 'package:compedia/features/forgot_password/forgot_password_route.dart';
 import 'package:compedia/features/home/home_route.dart';
 
@@ -48,5 +50,7 @@ class AppRoute {
     ...detailMentorRoute,
     ...jadwalMentoringRoute,
     ...detailStatusMentoringRoute,
+    ...findComunityRoute,
+    ...joinedComunityRoute,
   ];
 }
