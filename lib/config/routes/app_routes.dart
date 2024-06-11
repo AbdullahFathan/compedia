@@ -10,6 +10,7 @@ import 'package:compedia/features/login/login_route.dart';
 import 'package:compedia/features/main_app/main_app_route.dart';
 import 'package:compedia/features/mentor/detail_mentor/detail_mentor_route.dart';
 import 'package:compedia/features/mentor/find_mentor/find_mentor_route.dart';
+import 'package:compedia/features/mentor/jadwal_mentoring/jadwal_mentoring_route.dart';
 import 'package:compedia/features/mentor/mentor_route.dart';
 import 'package:compedia/features/mentor/status_mentoring/status_mentoring_route.dart';
 import 'package:compedia/features/onboarding/onboarding_route.dart';
@@ -44,5 +45,6 @@ class AppRoute {
     ...statusMentoringRoute,
     ...findMentorRoute,
     ...detailMentorRoute,
+    ...jadwalMentoringRoute,
   ];
 }

@@ -1,4 +1,5 @@
 import 'package:compedia/config/themes/resources/app_color.dart';
+import 'package:compedia/features/mentor/jadwal_mentoring/jadwal_mentoring_page.dart';
 import 'package:compedia/utils/widget/primary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -26,7 +27,7 @@ class ButtonDetailMentorSection extends StatelessWidget {
         ],
       ),
       child: PrimaryButton(
-        onPressed: () {},
+        onPressed: () => Get.toNamed(JadwalMentoringPage.route),
         text: 'txt_btn_dm'.tr,
       ),
     );
