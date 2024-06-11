@@ -3,8 +3,10 @@ import 'package:compedia/features/competition/find_competion/find_competion_cont
 import 'package:compedia/features/competition/followed_competion/followed_competion_controller.dart';
 import 'package:compedia/features/comunity/comunity_controller.dart';
 import 'package:compedia/features/home/home_controller.dart';
+import 'package:compedia/features/mentor/find_mentor/find_mentor_controller.dart';
 
 import 'package:compedia/features/mentor/mentor_controller.dart';
+import 'package:compedia/features/mentor/status_mentoring/status_mentoring_controller.dart';
 import 'package:compedia/features/profile/profile_controller.dart';
 
 import 'main_app_controller.dart';
@@ -22,5 +24,7 @@ class MainAppBinding implements Bindings {
     Get.lazyPut<FollowedCompetionController>(
         () => FollowedCompetionController());
     Get.lazyPut<FindCompetionController>(() => FindCompetionController());
+    Get.lazyPut<FindMentorController>(() => FindMentorController());
+    Get.lazyPut<StatusMentoringController>(() => StatusMentoringController());
   }
 }

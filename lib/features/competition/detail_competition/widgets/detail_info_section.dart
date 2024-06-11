@@ -1,7 +1,8 @@
 import 'package:compedia/config/gen/image_resources.dart';
 import 'package:compedia/config/themes/resources/app_color.dart';
 import 'package:compedia/features/home/widgets/content_layout.dart';
-import 'package:compedia/utils/widget/competion_category.dart';
+import 'package:compedia/models/category.dart';
+import 'package:compedia/utils/widget/category_chip.dart';
 import 'package:compedia/utils/widget/image_load.dart';
 import 'package:compedia/utils/widget/mentor_card.dart';
 import 'package:flutter/material.dart';
@@ -26,12 +27,14 @@ class DetailInfoSection extends StatelessWidget {
           height: 400,
           width: 300,
         ),
-        const Padding(
-          padding: EdgeInsets.only(
+        Padding(
+          padding: const EdgeInsets.only(
             top: 20,
             bottom: 12,
           ),
-          child: CompetionCategoryWidget(),
+          child: CategoryChipWidget(
+            dataList: dummyLombaCategory,
+          ),
         ),
         Column(
           mainAxisSize: MainAxisSize.min,

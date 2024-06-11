@@ -1,19 +1,27 @@
-import 'package:compedia/config/themes/resources/app_color.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class CompetionCategoryWidget extends StatelessWidget {
-  const CompetionCategoryWidget({super.key});
+import 'package:compedia/config/themes/resources/app_color.dart';
+import 'package:compedia/models/category.dart';
+
+class CategoryChipWidget extends StatelessWidget {
+  final List<Category> dataList;
+  const CategoryChipWidget({
+    super.key,
+    required this.dataList,
+  });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 27,
       child: ListView.separated(
-        itemCount: 1,
+        itemCount: dataList.length,
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
         itemBuilder: (context, index) {
+          var item = dataList[index];
           return Material(
             shape: const StadiumBorder(),
             color: AppColor.primary50,
@@ -23,7 +31,7 @@ class CompetionCategoryWidget extends StatelessWidget {
                 vertical: 6,
               ),
               child: Text(
-                "IT",
+                "${item.name}",
                 style: Get.textTheme.bodyMedium!.copyWith(
                   color: AppColor.primary70,
                   fontSize: 12,

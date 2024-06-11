@@ -8,7 +8,10 @@ import 'package:compedia/features/home/home_route.dart';
 
 import 'package:compedia/features/login/login_route.dart';
 import 'package:compedia/features/main_app/main_app_route.dart';
+import 'package:compedia/features/mentor/detail_mentor/detail_mentor_route.dart';
+import 'package:compedia/features/mentor/find_mentor/find_mentor_route.dart';
 import 'package:compedia/features/mentor/mentor_route.dart';
+import 'package:compedia/features/mentor/status_mentoring/status_mentoring_route.dart';
 import 'package:compedia/features/onboarding/onboarding_route.dart';
 import 'package:compedia/features/profile/profile_route.dart';
 import 'package:compedia/features/register/register_route.dart';
@@ -38,5 +41,8 @@ class AppRoute {
     ...followedCompetionRoute,
     ...findCompetionRoute,
     ...detailCompetitionRoute,
+    ...statusMentoringRoute,
+    ...findMentorRoute,
+    ...detailMentorRoute,
   ];
 }

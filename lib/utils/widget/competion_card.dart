@@ -1,7 +1,8 @@
 import 'package:compedia/config/gen/image_resources.dart';
 import 'package:compedia/config/themes/resources/app_color.dart';
 import 'package:compedia/features/competition/detail_competition/detail_competition_page.dart';
-import 'package:compedia/utils/widget/competion_category.dart';
+import 'package:compedia/models/category.dart';
+import 'package:compedia/utils/widget/category_chip.dart';
 import 'package:compedia/utils/widget/image_load.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -40,7 +41,9 @@ class CompetionCardWidget extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const CompetionCategoryWidget(),
+                  CategoryChipWidget(
+                    dataList: dummyLombaCategory,
+                  ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     child: Column(

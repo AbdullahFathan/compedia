@@ -122,4 +122,12 @@ Map<String, String> indonesia = {
       "Berikut rekomendasi mentor yang sesuai dengan lomba ini untuk membantumu!",
   'txt_dc_btn_color': "Daftar Sekarang (diluar aplikasi)",
   'txt_dc_btn_outline': "Tambahkan ke Daftar Kompetisi Diikuti",
+
+  //Detail Mentor
+  'txt_dm_appbar': 'Detail Mentor',
+  'txt_btn_dm': 'Jadwalkan Mentoring Sekarang',
+  'txt_dm_sosmed': "Sosial Media & Profil",
+  'txt_dm_pencapian': "Pencapian",
+  'txt_dm_cakupan': "Cakupan Mentoring",
+  'txt_dm_tnc': "Tnc Mentoring",
 };
