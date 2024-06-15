@@ -1,3 +1,4 @@
+import 'package:compedia/features/profile/account/account_page.dart';
 import 'package:compedia/models/profile_menu.dart';
 import 'package:compedia/utils/helper/base/base_controller.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +14,7 @@ class ProfileController extends BaseController<void> {
     ProfileMenu(
       title: "Akun Saya",
       icon: const Icon(Icons.person),
-      route: "",
+      route: AccountPage.route,
     ),
     ProfileMenu(
       title: "Lomba/Mentor/Topik Tersimpan",

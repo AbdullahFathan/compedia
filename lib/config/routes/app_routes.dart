@@ -20,6 +20,7 @@ import 'package:compedia/features/mentor/mentor_route.dart';
 import 'package:compedia/features/mentor/status_mentoring/detail_status_mentoring/detail_status_mentoring_route.dart';
 import 'package:compedia/features/mentor/status_mentoring/status_mentoring_route.dart';
 import 'package:compedia/features/onboarding/onboarding_route.dart';
+import 'package:compedia/features/profile/account/account_route.dart';
 import 'package:compedia/features/profile/profile_route.dart';
 import 'package:compedia/features/register/register_route.dart';
 import 'package:compedia/features/splash/splash_page.dart';
@@ -58,5 +59,6 @@ class AppRoute {
     ...detailComunityRoute,
     ...aboutComunityRoute,
     ...topikComunityRoute,
+    ...accountRoute,
   ];
 }
