@@ -1,5 +1,6 @@
 import 'package:compedia/features/profile/account/account_page.dart';
 import 'package:compedia/features/profile/bookmark/bookmark_page.dart';
+import 'package:compedia/features/profile/term_condition/term_condition_page.dart';
 import 'package:compedia/models/profile_menu.dart';
 import 'package:compedia/utils/helper/base/base_controller.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +31,7 @@ class ProfileController extends BaseController<void> {
     ProfileMenu(
       title: "Syarat & Ketentuan",
       icon: const FaIcon(FontAwesomeIcons.circleInfo),
-      route: "",
+      route: TermConditionPage.route,
     ),
   ];
   Future<void> loadData() async {}

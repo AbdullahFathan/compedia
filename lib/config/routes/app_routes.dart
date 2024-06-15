@@ -23,6 +23,7 @@ import 'package:compedia/features/onboarding/onboarding_route.dart';
 import 'package:compedia/features/profile/account/account_route.dart';
 import 'package:compedia/features/profile/bookmark/bookmark_route.dart';
 import 'package:compedia/features/profile/profile_route.dart';
+import 'package:compedia/features/profile/term_condition/term_condition_route.dart';
 import 'package:compedia/features/register/register_route.dart';
 import 'package:compedia/features/splash/splash_page.dart';
 import 'package:compedia/features/splash/splash_route.dart';
@@ -62,5 +63,6 @@ class AppRoute {
     ...topikComunityRoute,
     ...accountRoute,
     ...bookmarkRoute,
+    ...termConditionRoute,
   ];
 }
