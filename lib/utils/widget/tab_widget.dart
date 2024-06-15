@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 import 'package:compedia/config/themes/resources/app_color.dart';
@@ -6,10 +5,12 @@ import 'package:compedia/config/themes/resources/app_color.dart';
 class TabWidgetBuilder extends StatefulWidget {
   final List<String> tabName;
   final List<Widget> tabWidget;
+  final int? lenTab;
   const TabWidgetBuilder({
     super.key,
     required this.tabName,
     required this.tabWidget,
+    this.lenTab,
   });
 
   @override
@@ -23,7 +24,7 @@ class _TabWidgetBuilderState extends State<TabWidgetBuilder>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 2, vsync: this);
+    _tabController = TabController(length: widget.lenTab ?? 2, vsync: this);
     _tabController.addListener(_handleTabChange);
   }
 

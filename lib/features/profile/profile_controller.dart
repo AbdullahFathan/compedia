@@ -1,4 +1,5 @@
 import 'package:compedia/features/profile/account/account_page.dart';
+import 'package:compedia/features/profile/bookmark/bookmark_page.dart';
 import 'package:compedia/models/profile_menu.dart';
 import 'package:compedia/utils/helper/base/base_controller.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class ProfileController extends BaseController<void> {
     ProfileMenu(
       title: "Lomba/Mentor/Topik Tersimpan",
       icon: const Icon(Icons.bookmark),
-      route: "",
+      route: BookmarkPage.route,
     ),
     ProfileMenu(
       title: "Pertumbuhan Lombaku",
