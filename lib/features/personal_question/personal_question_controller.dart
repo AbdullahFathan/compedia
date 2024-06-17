@@ -47,6 +47,8 @@ class PersonalQuestionController extends BaseController<void> {
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
       );
+    } else {
+      Get.back();
     }
   }
 

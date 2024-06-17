@@ -1,5 +1,6 @@
 import 'package:compedia/config/themes/resources/app_color.dart';
 import 'package:compedia/features/home/widgets/content_layout.dart';
+import 'package:compedia/features/personal_question/personal_question_page.dart';
 import 'package:compedia/utils/widget/competion_card.dart';
 import 'package:compedia/utils/widget/comunity_card.dart';
 import 'package:compedia/utils/widget/mentor_card.dart';
@@ -61,7 +62,8 @@ class HomePage extends GetView<HomeController> {
                             ),
                             PrimaryButton(
                               text: 'txt_btn_program'.tr,
-                              onPressed: () {},
+                              onPressed: () =>
+                                  Get.toNamed(PersonalQuestionPage.route),
                               height: 45,
                               witdh: 150,
                               buttonColor: AppColor.secondaryColor,

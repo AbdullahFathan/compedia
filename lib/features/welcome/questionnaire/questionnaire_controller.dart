@@ -1,3 +1,4 @@
+import 'package:compedia/features/main_app/main_app_page.dart';
 import 'package:compedia/features/welcome/persona_done/persona_done_page.dart';
 import 'package:compedia/utils/helper/base/base_controller.dart';
 import 'package:compedia/utils/helper/snackbar_helper.dart';
@@ -39,6 +40,8 @@ class QuestionnaireController extends BaseController<void> {
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
       );
+    } else {
+      Get.offAllNamed(MainAppPage.route);
     }
   }
 
