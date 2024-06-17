@@ -1,16 +1,17 @@
-import 'package:compedia/features/welcome/questionnaire/widgets/question_one.dart';
-import 'package:compedia/features/welcome/questionnaire/widgets/question_third.dart';
-import 'package:compedia/features/welcome/questionnaire/widgets/question_two.dart';
+import 'package:compedia/features/personal_question/constants/personal_question_cons.dart';
+import 'package:compedia/features/personal_question/widgets/personal_question_builder.dart';
+import 'package:compedia/features/personal_question/widgets/text_area_question.dart';
 import 'package:compedia/features/welcome/questionnaire/widgets/stepper.dart';
 import 'package:compedia/utils/widget/primary_button.dart';
-import 'questionnaire_controller.dart';
+
+import 'personal_question_controller.dart';
 import 'package:compedia/utils/widget/state_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class QuestionnairePage extends GetView<QuestionnaireController> {
-  static const route = '/questionnaire';
-  const QuestionnairePage({super.key});
+class PersonalQuestionPage extends GetView<PersonalQuestionController> {
+  static const route = '/personal/question';
+  const PersonalQuestionPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,7 @@ class QuestionnairePage extends GetView<QuestionnaireController> {
                       child: PageView.builder(
                         controller: controller.pageController,
                         physics: const NeverScrollableScrollPhysics(),
-                        itemCount: 3,
+                        itemCount: titlePage.length,
                         itemBuilder: (context, index) {
                           return Container(
                             padding: const EdgeInsets.symmetric(
@@ -46,7 +47,7 @@ class QuestionnairePage extends GetView<QuestionnaireController> {
                                     len: 5,
                                   ),
                                 ),
-                                getContentBody(index),
+                                _getBody(index)
                               ],
                             ),
                           );
@@ -54,7 +55,9 @@ class QuestionnairePage extends GetView<QuestionnaireController> {
                       ),
                     ),
                     PrimaryButton(
-                        text: 'txt_btn_next'.tr,
+                        text: controller.currIndex.value != 4
+                            ? 'txt_btn_next'.tr
+                            : "Lihat Hasil Analisis",
                         onPressed: () {
                           controller.nextPage();
                         }),
@@ -77,19 +80,18 @@ class QuestionnairePage extends GetView<QuestionnaireController> {
     );
   }
 
-  Widget getContentBody(int index) {
-    switch (index) {
-      case 0:
-        return const QuestionOneWidget();
-      case 1:
-        return const QuestionTwoWidget();
-      case 2:
-        return const QuestionThridWidget();
-
-      default:
-        return Center(
-          child: Text("page ke - $index"),
-        );
+  Widget _getBody(int index) {
+    if (index != 4) {
+      return PersonalQuestionBuilder(
+        title: titlePage[index],
+        choicesAnswer: choicesData[index]!,
+        dataAnswer: controller.getCurentList(),
+      );
     }
+
+    return TextAreaQuestion(
+      title: titlePage[index],
+      textEditingController: controller.textEditingController,
+    );
   }
 }

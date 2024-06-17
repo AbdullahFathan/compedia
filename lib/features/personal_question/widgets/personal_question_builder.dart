@@ -1,12 +1,18 @@
-import 'package:compedia/features/welcome/questionnaire/constant/quiestionnaire_cons.dart';
-import 'package:compedia/features/welcome/questionnaire/questionnaire_controller.dart';
+import 'package:compedia/features/personal_question/personal_question_controller.dart';
 import 'package:compedia/features/welcome/questionnaire/widgets/choice_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
-class QuestionThridWidget extends GetView<QuestionnaireController> {
-  const QuestionThridWidget({super.key});
+class PersonalQuestionBuilder extends GetView<PersonalQuestionController> {
+  final String title;
+  final List<String> choicesAnswer;
+  final List<String> dataAnswer;
+  const PersonalQuestionBuilder(
+      {super.key,
+      required this.title,
+      required this.choicesAnswer,
+      required this.dataAnswer});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +21,7 @@ class QuestionThridWidget extends GetView<QuestionnaireController> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            'txt_title_3'.tr,
+            title,
             textAlign: TextAlign.center,
             style: Get.textTheme.bodyMedium!.copyWith(
               fontSize: 16,
@@ -25,16 +31,17 @@ class QuestionThridWidget extends GetView<QuestionnaireController> {
           ListView.separated(
             shrinkWrap: true,
             padding: const EdgeInsets.only(top: 30),
-            itemCount: harga.length,
+            itemCount: choicesAnswer.length,
             separatorBuilder: (context, index) => const SizedBox(
               height: 20,
             ),
             itemBuilder: (context, index) {
+              var item = choicesAnswer[index];
               return ChoiceButtonWidget(
                 height: 36,
                 witdh: 301,
-                text: harga[index],
-                isPick: controller.answerThird.contains(harga[index]),
+                text: item,
+                isPick: dataAnswer.contains(item),
                 controller: controller,
               );
             },

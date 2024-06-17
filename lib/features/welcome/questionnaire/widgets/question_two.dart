@@ -35,6 +35,7 @@ class QuestionTwoWidget extends GetView<QuestionnaireController> {
                 witdh: 301,
                 text: pelaksanaan[index],
                 isPick: controller.answerTwo.contains(pelaksanaan[index]),
+                controller: controller,
               );
             },
           )

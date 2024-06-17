@@ -5,7 +5,9 @@ import 'package:get/get.dart';
 
 class StepperWidget extends StatelessWidget {
   final int currentIndex;
-  const StepperWidget({super.key, required this.currentIndex});
+  final int len;
+  const StepperWidget(
+      {super.key, required this.currentIndex, required this.len});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,7 @@ class StepperWidget extends StatelessWidget {
         defaultLineColor: AppColor.primary30,
       ),
       steps: List.generate(
-        3,
+        len,
         (index) => EasyStep(
           customStep: Text(
             "${index + 1}",

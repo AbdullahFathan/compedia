@@ -88,8 +88,8 @@ Map<String, String> indonesia = {
   'txt_bn5': 'Profile',
 
   //Homepage
-  'txt_gabung_mentor': "Gabung Menjadi Mentor di\nCompedia Sekarang!",
-  'txt_btn_program': "Lihat Program",
+  'txt_gabung_mentor': "Tes untuk lihat persona dan\nkemampuan lombamu!",
+  'txt_btn_program': "Tes Sekarang",
   // Hompage - Rekomendasi Lomba Section
   'txt_lomba_title': "Rekomendasi Lomba 👀",
   'txt_lomba_sub': 'Berikut rekomendasi lomba yang sesuai dengan keminatanmu!',
