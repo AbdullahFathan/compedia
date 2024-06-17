@@ -36,6 +36,14 @@ class $AssetsImagesGen {
   AssetGenImage get imgLogoApp =>
       const AssetGenImage('assets/images/img_logo_app.png');
 
+  /// File path: assets/images/img_monboarding1.png
+  AssetGenImage get imgMonboarding1 =>
+      const AssetGenImage('assets/images/img_monboarding1.png');
+
+  /// File path: assets/images/img_monboarding2.png
+  AssetGenImage get imgMonboarding2 =>
+      const AssetGenImage('assets/images/img_monboarding2.png');
+
   /// File path: assets/images/img_poster_lomba.jpg
   AssetGenImage get imgPosterLomba =>
       const AssetGenImage('assets/images/img_poster_lomba.jpg');
@@ -72,6 +80,8 @@ class $AssetsImagesGen {
         imgHello,
         imgLogo,
         imgLogoApp,
+        imgMonboarding1,
+        imgMonboarding2,
         imgPosterLomba,
         imgQuestionDone,
         imgWelcome,

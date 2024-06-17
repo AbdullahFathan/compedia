@@ -1,10 +1,9 @@
-import 'package:compedia/utils/helper/base/base_controller.dart';
-import 'package:compedia/features/universal/login/login_page.dart';
 import 'package:compedia/models/onboarding.dart';
+import 'package:compedia/utils/helper/base/base_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class OnboardingController extends BaseController<void> {
+class MOnboardingController extends BaseController<void> {
   PageController pageController = PageController();
 
   RxInt currIndex = 0.obs;
@@ -14,13 +13,13 @@ class OnboardingController extends BaseController<void> {
   }
 
   void nextPage() {
-    if (currIndex.value < onboardingConstan.length - 1) {
+    if (currIndex.value < mOnBoardingConstans.length - 1) {
       pageController.nextPage(
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
       );
     } else {
-      Get.offNamed(LoginPage.route);
+      //TODO: direct ke page survey isi mentor
     }
   }
 
@@ -33,4 +32,6 @@ class OnboardingController extends BaseController<void> {
     pageController.dispose();
     super.onClose();
   }
+
+  Future<void> loadData() async {}
 }

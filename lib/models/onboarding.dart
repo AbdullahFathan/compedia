@@ -29,3 +29,18 @@ List<OnBoardingModel> onboardingConstan = [
     content: 'txt_contents4'.tr,
   ),
 ];
+
+List<OnBoardingModel> mOnBoardingConstans = [
+  OnBoardingModel(
+    title: "Selamat Datang Calon Mentor Lomba!",
+    image: appImages.imgMonboarding1.path,
+    content:
+        "Kami sangat mengapresiasi dukungan yang kamu berikan untuk mewujudkan equality education di lingkungan universitas di Indonesia!",
+  ),
+  OnBoardingModel(
+    title: "Lengkapi Data untuk Proses Verifikasi Tim Compedia",
+    image: appImages.imgMonboarding2.path,
+    content:
+        "Verifikasi data dilakukan untuk memastikan bahwa calon mentor compedia adalah pengguna asli bukan bot dengan data dummy!",
+  ),
+];

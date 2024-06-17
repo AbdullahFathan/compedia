@@ -1,17 +1,16 @@
 import 'package:compedia/config/themes/resources/app_color.dart';
 import 'package:compedia/models/onboarding.dart';
-import 'package:compedia/features/universal/onboarding/onboarding_controller.dart';
-
 import 'package:compedia/utils/widget/image_load.dart';
 import 'package:compedia/utils/widget/primary_button.dart';
 import 'package:dots_indicator/dots_indicator.dart';
-import 'package:flutter/material.dart';
 
+import 'm_onboarding_controller.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class OnboardingPage extends GetView<OnboardingController> {
-  static const route = '/onboarding';
-  const OnboardingPage({super.key});
+class MOnboardingPage extends GetView<MOnboardingController> {
+  static const route = '/m/onboarding';
+  const MOnboardingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,29 +19,13 @@ class OnboardingPage extends GetView<OnboardingController> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Align(
-                alignment: Alignment.topRight,
-                child: InkWell(
-                  onTap: () => controller.skipPage(),
-                  child: Text(
-                    'txt_btn_lewati'.tr,
-                    style: Get.textTheme.bodyMedium!.copyWith(
-                      fontSize: 15,
-                      color: AppColor.neutral60,
-                    ),
-                  ),
-                ),
-              ),
-            ),
             Expanded(
               child: PageView.builder(
                 controller: controller.pageController,
-                itemCount: onboardingConstan.length,
+                itemCount: mOnBoardingConstans.length,
                 onPageChanged: (value) => controller.onPageChange(value),
                 itemBuilder: (context, index) {
-                  var item = onboardingConstan[index];
+                  var item = mOnBoardingConstans[index];
                   return Obx(
                     () => Container(
                       padding: const EdgeInsets.all(16),
@@ -53,7 +36,11 @@ class OnboardingPage extends GetView<OnboardingController> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ImageLoad(src: item.image),
+                          ImageLoad(
+                            src: item.image,
+                            height: 280,
+                            width: 270,
+                          ),
                           Padding(
                             padding: const EdgeInsets.symmetric(
                               vertical: 16,
@@ -80,7 +67,7 @@ class OnboardingPage extends GetView<OnboardingController> {
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 25),
                             child: DotsIndicator(
-                              dotsCount: onboardingConstan.length,
+                              dotsCount: mOnBoardingConstans.length,
                               position: controller.currIndex.value,
                               decorator: DotsDecorator(
                                 size: const Size.square(10),
@@ -96,7 +83,7 @@ class OnboardingPage extends GetView<OnboardingController> {
                             width: 200,
                             child: PrimaryButton(
                               text: controller.currIndex.value ==
-                                      onboardingConstan.length - 1
+                                      mOnBoardingConstans.length - 1
                                   ? "Mulai Sekarang!"
                                   : "Selanjutnya",
                               onPressed: () => controller.nextPage(),

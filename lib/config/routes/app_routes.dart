@@ -1,3 +1,4 @@
+import 'package:compedia/features/mentor_side/m_onboarding/m_onboarding_route.dart';
 import 'package:compedia/features/student_side/competition/competition_route.dart';
 import 'package:compedia/features/student_side/competition/detail_competition/detail_competition_route.dart';
 import 'package:compedia/features/student_side/competition/find_competion/find_competion_route.dart';
@@ -68,5 +69,6 @@ class AppRoute {
     ...termConditionRoute,
     ...personalQuestionRoute,
     ...resultPersonalRoute,
+    ...mOnboardingRoute,
   ];
 }
