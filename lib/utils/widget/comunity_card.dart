@@ -1,5 +1,5 @@
 import 'package:compedia/config/themes/resources/app_color.dart';
-import 'package:compedia/features/comunity/detail_comunity/detail_comunity_page.dart';
+import 'package:compedia/features/student_side/comunity/detail_comunity/detail_comunity_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

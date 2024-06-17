@@ -1,6 +1,6 @@
 import 'package:compedia/config/gen/image_resources.dart';
 import 'package:compedia/config/themes/resources/app_color.dart';
-import 'package:compedia/features/competition/detail_competition/detail_competition_page.dart';
+import 'package:compedia/features/student_side/competition/detail_competition/detail_competition_page.dart';
 import 'package:compedia/models/category.dart';
 import 'package:compedia/utils/widget/category_chip.dart';
 import 'package:compedia/utils/widget/image_load.dart';

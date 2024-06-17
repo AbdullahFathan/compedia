@@ -1,20 +1,20 @@
 import 'package:compedia/config/themes/resources/app_color.dart';
-import 'package:compedia/features/student_side/mentor/detail_mentor/detail_mentor_page.dart';
+import 'package:compedia/features/student_side/mentor/status_mentoring/detail_status_mentoring/detail_status_mentoring_page.dart';
+import 'package:compedia/models/category.dart';
+import 'package:compedia/utils/widget/category_chip.dart';
 import 'package:compedia/utils/widget/image_load.dart';
-
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 
-class MentorCardWidget extends StatelessWidget {
-  const MentorCardWidget({super.key});
+class DetailMentoringCardWidget extends StatelessWidget {
+  const DetailMentoringCardWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => Get.toNamed(DetailMentorPage.route),
+      onTap: () => Get.toNamed(DetailStatusMentoringPage.route),
       child: Container(
-        height: 200,
+        height: 160,
         width: 345,
         padding: const EdgeInsets.symmetric(
           vertical: 8,
@@ -57,24 +57,17 @@ class MentorCardWidget extends StatelessWidget {
                         .copyWith(fontSize: 14, color: AppColor.primaryColor),
                   ),
                 ),
-                Text(
-                  "Rp 20.000/sesi",
-                  style: Get.textTheme.bodyMedium!
-                      .copyWith(fontSize: 14, color: AppColor.primary70),
-                ),
+                CategoryChipWidget(dataList: dummyLombaCategory),
                 const SizedBox(
-                  height: 8,
+                  height: 10,
                 ),
-                Flexible(
-                  child: Text(
-                    "Memenangkan 10 lomba software\ndevelopment tingkat nasional! ...",
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: Get.textTheme.bodyMedium!.copyWith(
-                      fontSize: 12,
-                    ),
+                Text(
+                  "Menunggu Persetujuan Mentor",
+                  style: Get.textTheme.bodyMedium!.copyWith(
+                    fontSize: 14,
+                    color: AppColor.yellowColor,
                   ),
-                )
+                ),
               ],
             )
           ],
