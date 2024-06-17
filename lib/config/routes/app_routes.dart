@@ -21,6 +21,7 @@ import 'package:compedia/features/mentor/status_mentoring/detail_status_mentorin
 import 'package:compedia/features/mentor/status_mentoring/status_mentoring_route.dart';
 import 'package:compedia/features/onboarding/onboarding_route.dart';
 import 'package:compedia/features/personal_question/personal_question_route.dart';
+import 'package:compedia/features/personal_question/result_personal/result_personal_route.dart';
 import 'package:compedia/features/profile/account/account_route.dart';
 import 'package:compedia/features/profile/bookmark/bookmark_route.dart';
 import 'package:compedia/features/profile/profile_route.dart';
@@ -66,5 +67,6 @@ class AppRoute {
     ...bookmarkRoute,
     ...termConditionRoute,
     ...personalQuestionRoute,
+    ...resultPersonalRoute,
   ];
 }

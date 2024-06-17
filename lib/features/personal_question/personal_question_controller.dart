@@ -1,3 +1,4 @@
+import 'package:compedia/features/personal_question/result_personal/result_personal_page.dart';
 import 'package:compedia/utils/helper/base/base_controller.dart';
 import 'package:compedia/utils/helper/snackbar_helper.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,11 @@ class PersonalQuestionController extends BaseController<void> {
           curve: Curves.easeInOut,
         );
       } else {
-        //TODO: direct ke page lain
+        if (textEditingController.text.isNotEmpty) {
+          Get.offNamed(ResultPersonalPage.route);
+        } else {
+          SnackBarHelper.erorSnackBar("Perlu menulis data");
+        }
       }
     } else {
       SnackBarHelper.erorSnackBar("Perlu memilih 1 item");
@@ -67,7 +72,7 @@ class PersonalQuestionController extends BaseController<void> {
         return answerFour;
 
       default:
-        return [];
+        return ["default"];
     }
   }
 
