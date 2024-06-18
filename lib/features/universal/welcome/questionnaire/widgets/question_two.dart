@@ -1,4 +1,4 @@
-import 'package:compedia/features/universal/welcome/questionnaire/constant/quiestionnaire_cons.dart';
+import 'package:compedia/models/constant/quiestionnaire_cons.dart';
 import 'package:compedia/features/universal/welcome/questionnaire/questionnaire_controller.dart';
 import 'package:compedia/features/universal/welcome/questionnaire/widgets/choice_button.dart';
 import 'package:flutter/material.dart';

@@ -1,11 +1,11 @@
-import 'package:compedia/models/constant/quiestionnaire_cons.dart';
-import 'package:compedia/features/universal/welcome/questionnaire/questionnaire_controller.dart';
+import 'package:compedia/features/mentor_side/m_survey/m_survey_controller.dart';
 import 'package:compedia/features/universal/welcome/questionnaire/widgets/choice_button.dart';
+import 'package:compedia/models/constant/quiestionnaire_cons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class QuestionOneWidget extends GetView<QuestionnaireController> {
-  const QuestionOneWidget({super.key});
+class MSurveyOneWidget extends GetView<MSurveyController> {
+  const MSurveyOneWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,14 +13,6 @@ class QuestionOneWidget extends GetView<QuestionnaireController> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(
-            'txt_title_1'.tr,
-            textAlign: TextAlign.center,
-            style: Get.textTheme.bodyMedium!.copyWith(
-              fontSize: 16,
-              height: 1.5,
-            ),
-          ),
           GridView.builder(
             shrinkWrap: true,
             padding: const EdgeInsets.only(top: 30),

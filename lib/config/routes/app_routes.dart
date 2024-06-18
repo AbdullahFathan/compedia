@@ -1,4 +1,7 @@
+import 'package:compedia/features/mentor_side/m_main_app/m_main_app_route.dart';
 import 'package:compedia/features/mentor_side/m_onboarding/m_onboarding_route.dart';
+import 'package:compedia/features/mentor_side/m_survey/m_survey_result/m_survey_result_route.dart';
+import 'package:compedia/features/mentor_side/m_survey/m_survey_route.dart';
 import 'package:compedia/features/student_side/competition/competition_route.dart';
 import 'package:compedia/features/student_side/competition/detail_competition/detail_competition_route.dart';
 import 'package:compedia/features/student_side/competition/find_competion/find_competion_route.dart';
@@ -70,5 +73,8 @@ class AppRoute {
     ...personalQuestionRoute,
     ...resultPersonalRoute,
     ...mOnboardingRoute,
+    ...mSurveyRoute,
+    ...mSurveyResultRoute,
+    ...mMainAppRoute,
   ];
 }

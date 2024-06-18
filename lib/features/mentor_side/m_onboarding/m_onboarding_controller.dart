@@ -1,3 +1,4 @@
+import 'package:compedia/features/mentor_side/m_survey/m_survey_page.dart';
 import 'package:compedia/models/onboarding.dart';
 import 'package:compedia/utils/helper/base/base_controller.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class MOnboardingController extends BaseController<void> {
         curve: Curves.easeInOut,
       );
     } else {
-      //TODO: direct ke page survey isi mentor
+      Get.toNamed(MSurveyPage.route);
     }
   }
 
