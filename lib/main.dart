@@ -1,6 +1,6 @@
 import 'package:compedia/config/routes/app_routes.dart';
 import 'package:compedia/config/translation/app_translation.dart';
-import 'package:compedia/features/mentor_side/m_onboarding/m_onboarding_page.dart';
+import 'package:compedia/features/mentor_side/m_main_app/m_main_app_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:compedia/config/themes/app_theme.dart';
@@ -22,7 +22,7 @@ class MainApp extends StatelessWidget {
       translations: Messages(),
       theme: ThemeClass.lightTheme,
       getPages: AppRoute.appPages,
-      initialRoute: MOnboardingPage.route,
+      initialRoute: MMainAppPage.route,
     );
   }
 }
