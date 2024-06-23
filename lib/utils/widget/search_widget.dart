@@ -6,11 +6,13 @@ class SearchWidget extends StatelessWidget {
   final String hint;
   final TextEditingController controller;
   final void Function(String) onSubmit;
+  final bool isVisibel;
   const SearchWidget({
     super.key,
     required this.hint,
     required this.controller,
     required this.onSubmit,
+    this.isVisibel = true,
   });
 
   @override
@@ -46,20 +48,23 @@ class SearchWidget extends StatelessWidget {
         const SizedBox(
           width: 20,
         ),
-        Container(
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: AppColor.bordeColor,
-              width: 1,
+        Visibility(
+          visible: isVisibel,
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: AppColor.bordeColor,
+                width: 1,
+              ),
+              borderRadius: BorderRadius.circular(8),
             ),
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: IconButton(
-            onPressed: () async {},
-            icon: const Icon(
-              Icons.tune,
-              size: 32,
-              color: AppColor.neutral60,
+            child: IconButton(
+              onPressed: () async {},
+              icon: const Icon(
+                Icons.tune,
+                size: 32,
+                color: AppColor.neutral60,
+              ),
             ),
           ),
         ),

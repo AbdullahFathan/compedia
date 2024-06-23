@@ -1,4 +1,8 @@
+import 'package:compedia/features/mentor_side/m_home_page/m_home_page_route.dart';
 import 'package:compedia/features/mentor_side/m_main_app/m_main_app_route.dart';
+import 'package:compedia/features/mentor_side/m_mentoring/m_menoting_disejutui/m_menoting_disejutui_route.dart';
+import 'package:compedia/features/mentor_side/m_mentoring/m_menoting_selesai/m_menoting_selesai_route.dart';
+import 'package:compedia/features/mentor_side/m_mentoring/m_mentoring_route.dart';
 import 'package:compedia/features/mentor_side/m_onboarding/m_onboarding_route.dart';
 import 'package:compedia/features/mentor_side/m_survey/m_survey_result/m_survey_result_route.dart';
 import 'package:compedia/features/mentor_side/m_survey/m_survey_route.dart';
@@ -76,5 +80,10 @@ class AppRoute {
     ...mSurveyRoute,
     ...mSurveyResultRoute,
     ...mMainAppRoute,
+    ...mMentoringRoute,
+    ...mHomePageRoute,
+    ...mMenotingDisejutuiRoute,
+    ...mMenotingSelesaiRoute,
+    ...mMenotingSelesaiRoute,
   ];
 }

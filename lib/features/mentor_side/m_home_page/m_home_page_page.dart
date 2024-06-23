@@ -1,6 +1,5 @@
 import 'package:compedia/config/themes/resources/app_color.dart';
 import 'package:compedia/features/student_side/home/widgets/content_layout.dart';
-import 'package:compedia/utils/widget/competion_card.dart';
 import 'package:compedia/utils/widget/m_mentoring_card.dart';
 import 'package:compedia/utils/widget/primary_button.dart';
 

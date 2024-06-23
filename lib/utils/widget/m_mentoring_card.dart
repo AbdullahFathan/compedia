@@ -19,7 +19,7 @@ class MMentoringCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 180,
+      height: 140,
       width: 330,
       padding: const EdgeInsets.symmetric(
         vertical: 16,

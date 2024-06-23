@@ -1,6 +1,7 @@
 import 'package:compedia/config/gen/image_resources.dart';
 import 'package:compedia/config/themes/resources/app_color.dart';
 import 'package:compedia/features/mentor_side/m_home_page/m_home_page_page.dart';
+import 'package:compedia/features/mentor_side/m_mentoring/m_mentoring_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ class _MMainAppPageState extends State<MMainAppPage> {
         index: _index,
         children: [
           const MHomePagePage(),
-          Container(),
+          const MMentoringPage(),
           Container(),
           Container(),
         ],
@@ -64,7 +65,7 @@ class _MMainAppPageState extends State<MMainAppPage> {
               ),
               label: "Jadwal"),
           const BottomNavigationBarItem(
-            icon: const Icon(Icons.person),
+            icon: Icon(Icons.person),
             label: "Profile",
           ),
         ],
