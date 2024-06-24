@@ -1,5 +1,6 @@
 import 'package:compedia/features/mentor_side/m_home_page/m_home_page_route.dart';
 import 'package:compedia/features/mentor_side/m_main_app/m_main_app_route.dart';
+import 'package:compedia/features/mentor_side/m_mentoring/m_detail_mentoring/m_detail_mentoring_route.dart';
 import 'package:compedia/features/mentor_side/m_mentoring/m_menoting_disejutui/m_menoting_disejutui_route.dart';
 import 'package:compedia/features/mentor_side/m_mentoring/m_menoting_selesai/m_menoting_selesai_route.dart';
 import 'package:compedia/features/mentor_side/m_mentoring/m_mentoring_route.dart';
@@ -85,5 +86,6 @@ class AppRoute {
     ...mMenotingDisejutuiRoute,
     ...mMenotingSelesaiRoute,
     ...mMenotingSelesaiRoute,
+    ...mDetailMentoringRoute,
   ];
 }
