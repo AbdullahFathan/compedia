@@ -1,5 +1,6 @@
 import 'package:compedia/config/gen/image_resources.dart';
 import 'package:compedia/config/themes/resources/app_color.dart';
+import 'package:compedia/features/mentor_side/m_account/m_account_page.dart';
 import 'package:compedia/features/mentor_side/m_home_page/m_home_page_page.dart';
 import 'package:compedia/features/mentor_side/m_jadwal/m_jadwal_page.dart';
 import 'package:compedia/features/mentor_side/m_mentoring/m_mentoring_page.dart';
@@ -24,11 +25,11 @@ class _MMainAppPageState extends State<MMainAppPage> {
     return Scaffold(
       body: IndexedStack(
         index: _index,
-        children: [
-          const MHomePagePage(),
-          const MMentoringPage(),
-          const MJadwalPage(),
-          Container(),
+        children: const [
+          MHomePagePage(),
+          MMentoringPage(),
+          MJadwalPage(),
+          MAccountPage(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

@@ -1,3 +1,4 @@
+import 'package:compedia/features/mentor_side/m_account/m_account_controller.dart';
 import 'package:compedia/features/mentor_side/m_home_page/m_home_page_controller.dart';
 import 'package:compedia/features/mentor_side/m_jadwal/m_jadwal_controller.dart';
 import 'package:compedia/features/mentor_side/m_jadwal/m_jadwal_kaldaluwarsa/m_jadwal_kaldaluwarsa_controller.dart';
@@ -25,5 +26,6 @@ class MMainAppBinding implements Bindings {
     Get.lazyPut<MJadwalTersediaController>(() => MJadwalTersediaController());
     Get.lazyPut<MJadwalKaldaluwarsaController>(
         () => MJadwalKaldaluwarsaController());
+    Get.lazyPut<MAccountController>(() => MAccountController());
   }
 }

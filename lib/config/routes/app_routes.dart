@@ -1,3 +1,4 @@
+import 'package:compedia/features/mentor_side/m_account/m_account_route.dart';
 import 'package:compedia/features/mentor_side/m_home_page/m_home_page_route.dart';
 import 'package:compedia/features/mentor_side/m_jadwal/m_jadwal_kaldaluwarsa/m_jadwal_kaldaluwarsa_route.dart';
 import 'package:compedia/features/mentor_side/m_jadwal/m_jadwal_route.dart';
@@ -93,5 +94,6 @@ class AppRoute {
     ...mJadwalRoute,
     ...mJadwalTersediaRoute,
     ...mJadwalKaldaluwarsaRoute,
+    ...mAccountRoute,
   ];
 }
