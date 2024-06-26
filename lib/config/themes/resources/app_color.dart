@@ -18,6 +18,7 @@ class AppColor {
 
   static const bordeColor = Colors.grey;
   static const hintColor = Color(0xffBABABC);
+  static const neutral40 = Color(0xfCE1DDDF);
   static const neutral50 = Color(0xffCBC4C6);
   static const neutral60 = Color(0xf7B5AAAE);
   static const neutral70 = Color(0xff74696D);

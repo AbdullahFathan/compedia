@@ -1,6 +1,7 @@
 import 'package:compedia/config/gen/image_resources.dart';
 import 'package:compedia/config/themes/resources/app_color.dart';
 import 'package:compedia/features/mentor_side/m_home_page/m_home_page_page.dart';
+import 'package:compedia/features/mentor_side/m_jadwal/m_jadwal_page.dart';
 import 'package:compedia/features/mentor_side/m_mentoring/m_mentoring_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -26,7 +27,7 @@ class _MMainAppPageState extends State<MMainAppPage> {
         children: [
           const MHomePagePage(),
           const MMentoringPage(),
-          Container(),
+          const MJadwalPage(),
           Container(),
         ],
       ),

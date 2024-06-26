@@ -1,4 +1,7 @@
 import 'package:compedia/features/mentor_side/m_home_page/m_home_page_route.dart';
+import 'package:compedia/features/mentor_side/m_jadwal/m_jadwal_kaldaluwarsa/m_jadwal_kaldaluwarsa_route.dart';
+import 'package:compedia/features/mentor_side/m_jadwal/m_jadwal_route.dart';
+import 'package:compedia/features/mentor_side/m_jadwal/m_jadwal_tersedia/m_jadwal_tersedia_route.dart';
 import 'package:compedia/features/mentor_side/m_main_app/m_main_app_route.dart';
 import 'package:compedia/features/mentor_side/m_mentoring/m_detail_mentoring/m_detail_mentoring_route.dart';
 import 'package:compedia/features/mentor_side/m_mentoring/m_menoting_disejutui/m_menoting_disejutui_route.dart';
@@ -87,5 +90,8 @@ class AppRoute {
     ...mMenotingSelesaiRoute,
     ...mMenotingSelesaiRoute,
     ...mDetailMentoringRoute,
+    ...mJadwalRoute,
+    ...mJadwalTersediaRoute,
+    ...mJadwalKaldaluwarsaRoute,
   ];
 }

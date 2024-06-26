@@ -102,11 +102,13 @@ class MMentoringCardWidget extends StatelessWidget {
     required Color borderColor,
     required String date,
     required String time,
+    Color? iconColor,
+    Color? textColor,
   }) {
     return Container(
       height: 70,
       padding: const EdgeInsets.symmetric(
-        vertical: 16,
+        vertical: 14,
         horizontal: 20,
       ),
       decoration: BoxDecoration(
@@ -117,31 +119,33 @@ class MMentoringCardWidget extends StatelessWidget {
           color: borderColor,
         ),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              const Icon(
-                Icons.calendar_month_rounded,
-                color: AppColor.neutral100,
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Text(
-                "$date / $time",
-                style: Get.textTheme.bodyMedium!.copyWith(
-                  fontSize: 14,
+      child: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Icon(
+                  Icons.calendar_month_rounded,
+                  color: iconColor ?? AppColor.neutral100,
                 ),
-              )
-            ],
-          ),
-          const SizedBox(
-            height: 12,
-          ),
-        ],
+                const SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  "$date / $time",
+                  style: Get.textTheme.bodyMedium!.copyWith(
+                    fontSize: 14,
+                    color: textColor ?? AppColor.neutral100,
+                  ),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -1,4 +1,7 @@
 import 'package:compedia/features/mentor_side/m_home_page/m_home_page_controller.dart';
+import 'package:compedia/features/mentor_side/m_jadwal/m_jadwal_controller.dart';
+import 'package:compedia/features/mentor_side/m_jadwal/m_jadwal_kaldaluwarsa/m_jadwal_kaldaluwarsa_controller.dart';
+import 'package:compedia/features/mentor_side/m_jadwal/m_jadwal_tersedia/m_jadwal_tersedia_controller.dart';
 import 'package:compedia/features/mentor_side/m_mentoring/m_menoting_disejutui/m_menoting_disejutui_controller.dart';
 import 'package:compedia/features/mentor_side/m_mentoring/m_menoting_menunggu/m_menoting_menunggu_controller.dart';
 import 'package:compedia/features/mentor_side/m_mentoring/m_menoting_selesai/m_menoting_selesai_controller.dart';
@@ -18,5 +21,9 @@ class MMainAppBinding implements Bindings {
     Get.lazyPut<MMenotingMenungguController>(
         () => MMenotingMenungguController());
     Get.lazyPut<MMenotingSelesaiController>(() => MMenotingSelesaiController());
+    Get.lazyPut<MJadwalController>(() => MJadwalController());
+    Get.lazyPut<MJadwalTersediaController>(() => MJadwalTersediaController());
+    Get.lazyPut<MJadwalKaldaluwarsaController>(
+        () => MJadwalKaldaluwarsaController());
   }
 }
