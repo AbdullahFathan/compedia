@@ -1,3 +1,4 @@
+import 'package:compedia/features/mentor_side/m_onboarding/m_onboarding_page.dart';
 import 'package:compedia/features/student_side/profile/account/account_page.dart';
 import 'package:compedia/features/student_side/profile/bookmark/bookmark_page.dart';
 import 'package:compedia/features/student_side/profile/term_condition/term_condition_page.dart';
@@ -11,7 +12,7 @@ class ProfileController extends BaseController<void> {
     ProfileMenu(
       title: "Beralih Ke Mode Mentor",
       icon: const FaIcon(FontAwesomeIcons.crown),
-      route: "",
+      route: MOnboardingPage.route,
     ),
     ProfileMenu(
       title: "Akun Saya",

@@ -15,7 +15,7 @@ class CompetionCardWidget extends StatelessWidget {
     return InkWell(
       onTap: () => Get.toNamed(DetailCompetitionPage.route),
       child: Container(
-        height: 200,
+        height: 220,
         width: 350,
         padding: const EdgeInsets.symmetric(
           vertical: 8,

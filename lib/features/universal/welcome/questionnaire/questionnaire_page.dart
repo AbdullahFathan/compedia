@@ -24,52 +24,55 @@ class QuestionnairePage extends GetView<QuestionnaireController> {
                 isLoading: controller.isLoading,
                 isEmpty: controller.isEmpty,
                 isEror: controller.isEror,
-                body: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: PageView.builder(
-                        controller: controller.pageController,
-                        physics: const NeverScrollableScrollPhysics(),
-                        itemCount: 3,
-                        itemBuilder: (context, index) {
-                          return Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 16,
-                              vertical: 12,
-                            ),
-                            child: Column(
-                              children: [
-                                Obx(
-                                  () => StepperWidget(
-                                    currentIndex: controller.currIndex.value,
-                                    len: 5,
+                body: SafeArea(
+                  minimum: const EdgeInsets.only(bottom: 20),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: PageView.builder(
+                          controller: controller.pageController,
+                          physics: const NeverScrollableScrollPhysics(),
+                          itemCount: 3,
+                          itemBuilder: (context, index) {
+                            return Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16,
+                                vertical: 12,
+                              ),
+                              child: Column(
+                                children: [
+                                  Obx(
+                                    () => StepperWidget(
+                                      currentIndex: controller.currIndex.value,
+                                      len: 3,
+                                    ),
                                   ),
-                                ),
-                                getContentBody(index),
-                              ],
-                            ),
-                          );
-                        },
+                                  getContentBody(index),
+                                ],
+                              ),
+                            );
+                          },
+                        ),
                       ),
-                    ),
-                    PrimaryButton(
-                        text: 'txt_btn_next'.tr,
-                        onPressed: () {
-                          controller.nextPage();
-                        }),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    SizedBox(
-                      width: double.infinity,
-                      child: PrimaryButton.outlineVersion(
-                          text: 'txt_btn_back'.tr,
-                          onTap: () {
-                            controller.prevPage();
+                      PrimaryButton(
+                          text: 'txt_btn_next'.tr,
+                          onPressed: () {
+                            controller.nextPage();
                           }),
-                    )
-                  ],
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      SizedBox(
+                        width: double.infinity,
+                        child: PrimaryButton.outlineVersion(
+                            text: 'txt_btn_back'.tr,
+                            onTap: () {
+                              controller.prevPage();
+                            }),
+                      )
+                    ],
+                  ),
                 )),
           ),
         ),

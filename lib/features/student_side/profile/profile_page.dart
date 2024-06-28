@@ -43,7 +43,7 @@ class ProfilePage extends GetView<ProfileController> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Vinncent Alexander Wong",
+                          "Fathan",
                           style: Get.textTheme.bodyMedium!.copyWith(
                             fontSize: 16,
                             height: 2.5,

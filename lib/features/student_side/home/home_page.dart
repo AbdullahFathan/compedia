@@ -60,12 +60,15 @@ class HomePage extends GetView<HomeController> {
                                 color: AppColor.secondaryColor,
                               ),
                             ),
+                            const SizedBox(
+                              width: 5,
+                            ),
                             PrimaryButton(
                               text: 'txt_btn_program'.tr,
                               onPressed: () =>
                                   Get.toNamed(PersonalQuestionPage.route),
                               height: 45,
-                              witdh: 150,
+                              witdh: 125,
                               buttonColor: AppColor.secondaryColor,
                               padingHorizontal: 8,
                               padingVertical: 12,

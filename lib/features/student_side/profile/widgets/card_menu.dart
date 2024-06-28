@@ -18,9 +18,7 @@ class CardMenuWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        if (index != 0) {
-          Get.toNamed(item.route);
-        }
+        Get.toNamed(item.route);
       },
       child: Container(
         width: double.infinity,

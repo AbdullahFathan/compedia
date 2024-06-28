@@ -20,7 +20,7 @@ class MSurveyPage extends GetView<MSurveyController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        minimum: const EdgeInsets.symmetric(horizontal: 16),
+        minimum: const EdgeInsets.only(left: 16, right: 16, bottom: 20),
         child: Obx(
           () => RefreshIndicator(
             onRefresh: () => controller.loadData(),

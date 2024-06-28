@@ -28,7 +28,7 @@ class QuestionOneWidget extends GetView<QuestionnaireController> {
                 crossAxisCount: 3,
                 mainAxisSpacing: 20,
                 crossAxisSpacing: 20,
-                mainAxisExtent: 48),
+                mainAxisExtent: 63),
             itemCount: keminatan.length,
             itemBuilder: (context, index) {
               return ChoiceButtonWidget(

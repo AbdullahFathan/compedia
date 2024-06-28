@@ -34,9 +34,9 @@ class MAccountPage extends GetView<MAccountController> {
                       boxShadow: [
                         BoxShadow(
                           color: Color(0x26000000),
-                          offset: Offset(0, 3), // Mengatur offset bayangan
+                          offset: Offset(0, 3),
                           blurRadius: 8,
-                          spreadRadius: -1, // Mengatur spread radius negatif
+                          spreadRadius: -1,
                         ),
                       ],
                     ),
@@ -44,7 +44,7 @@ class MAccountPage extends GetView<MAccountController> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Vinncent Alexander Wong",
+                          "Fathan",
                           style: Get.textTheme.bodyMedium!.copyWith(
                             fontSize: 16,
                             height: 2.5,
